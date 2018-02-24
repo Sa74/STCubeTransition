@@ -47,7 +47,7 @@ class ViewController: UIViewController, CubeTransitionDelegate {
             subMenu!.backgroundColor = UIColor.purple
         }
         
-        cubeTranstion.translateView(faceView: self.faceView,
+        cubeTranstion.translateView(faceView: self.faceView!,
                                     withView: subMenu!,
                                     toDirection: direction,
                                     withDetlay: 0.5)
