@@ -14,6 +14,7 @@
 		5E8FEBA7203F51A3007D9DA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FEBA5203F51A3007D9DA2 /* LaunchScreen.storyboard */; };
 		5E8FEBAF203F51E7007D9DA2 /* STCubeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8FEBAE203F51E7007D9DA2 /* STCubeTransition.swift */; };
 		5EE1E80120429C6B00FE6F89 /* STCubeTransition.mov in Resources */ = {isa = PBXBuildFile; fileRef = 5EE1E80020429C6B00FE6F89 /* STCubeTransition.mov */; };
+		5EE1E80520429F4A00FE6F89 /* STCubeTransition.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5EE1E80420429F4A00FE6F89 /* STCubeTransition.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5E8FEBA8203F51A3007D9DA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E8FEBAE203F51E7007D9DA2 /* STCubeTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = STCubeTransition.swift; path = STCubeTransition/STCubeTransition.swift; sourceTree = "<group>"; };
 		5EE1E80020429C6B00FE6F89 /* STCubeTransition.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = STCubeTransition.mov; sourceTree = "<group>"; };
+		5EE1E80420429F4A00FE6F89 /* STCubeTransition.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = STCubeTransition.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		5EE1E7FF20429C3B00FE6F89 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				5EE1E80420429F4A00FE6F89 /* STCubeTransition.gif */,
 				5EE1E80020429C6B00FE6F89 /* STCubeTransition.mov */,
 			);
 			path = assets;
@@ -149,6 +152,7 @@
 				5EE1E80120429C6B00FE6F89 /* STCubeTransition.mov in Resources */,
 				5E8FEBA4203F51A3007D9DA2 /* Assets.xcassets in Resources */,
 				5E8FEBA2203F51A3007D9DA2 /* Main.storyboard in Resources */,
+				5EE1E80520429F4A00FE6F89 /* STCubeTransition.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
