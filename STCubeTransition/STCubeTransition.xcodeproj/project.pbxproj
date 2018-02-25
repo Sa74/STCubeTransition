@@ -13,6 +13,7 @@
 		5E8FEBA4203F51A3007D9DA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FEBA3203F51A3007D9DA2 /* Assets.xcassets */; };
 		5E8FEBA7203F51A3007D9DA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E8FEBA5203F51A3007D9DA2 /* LaunchScreen.storyboard */; };
 		5E8FEBAF203F51E7007D9DA2 /* STCubeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8FEBAE203F51E7007D9DA2 /* STCubeTransition.swift */; };
+		5EE1E80120429C6B00FE6F89 /* STCubeTransition.mov in Resources */ = {isa = PBXBuildFile; fileRef = 5EE1E80020429C6B00FE6F89 /* STCubeTransition.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5E8FEBA6203F51A3007D9DA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E8FEBA8203F51A3007D9DA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E8FEBAE203F51E7007D9DA2 /* STCubeTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = STCubeTransition.swift; path = STCubeTransition/STCubeTransition.swift; sourceTree = "<group>"; };
+		5EE1E80020429C6B00FE6F89 /* STCubeTransition.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = STCubeTransition.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,32 @@
 		5E8FEB9B203F51A3007D9DA2 /* STCubeTransition */ = {
 			isa = PBXGroup;
 			children = (
-				5E8FEB9C203F51A3007D9DA2 /* AppDelegate.swift */,
-				5E8FEB9E203F51A3007D9DA2 /* ViewController.swift */,
 				5E8FEBAE203F51E7007D9DA2 /* STCubeTransition.swift */,
+				5EE1E7FF20429C3B00FE6F89 /* assets */,
+				5EE1E7FE20429C2900FE6F89 /* Demo */,
 				5E8FEBA0203F51A3007D9DA2 /* Main.storyboard */,
 				5E8FEBA3203F51A3007D9DA2 /* Assets.xcassets */,
 				5E8FEBA5203F51A3007D9DA2 /* LaunchScreen.storyboard */,
 				5E8FEBA8203F51A3007D9DA2 /* Info.plist */,
 			);
 			path = STCubeTransition;
+			sourceTree = "<group>";
+		};
+		5EE1E7FE20429C2900FE6F89 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				5E8FEB9C203F51A3007D9DA2 /* AppDelegate.swift */,
+				5E8FEB9E203F51A3007D9DA2 /* ViewController.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		5EE1E7FF20429C3B00FE6F89 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				5EE1E80020429C6B00FE6F89 /* STCubeTransition.mov */,
+			);
+			path = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E8FEBA7203F51A3007D9DA2 /* LaunchScreen.storyboard in Resources */,
+				5EE1E80120429C6B00FE6F89 /* STCubeTransition.mov in Resources */,
 				5E8FEBA4203F51A3007D9DA2 /* Assets.xcassets in Resources */,
 				5E8FEBA2203F51A3007D9DA2 /* Main.storyboard in Resources */,
 			);
