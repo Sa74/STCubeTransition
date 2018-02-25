@@ -28,44 +28,56 @@
                             </view>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2e-PY-R1b">
                                 <rect key="frame" x="26" y="105" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="VPa-vU-P8y"/>
                                     <constraint firstAttribute="height" constant="30" id="aDe-zD-vfb"/>
                                 </constraints>
-                                <state key="normal" title="Down"/>
+                                <state key="normal" title="Down">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonTappenWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H8L-yw-0tz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjG-gi-FfQ">
                                 <rect key="frame" x="119" y="105" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="LTJ-zV-F2H"/>
                                     <constraint firstAttribute="width" constant="46" id="Qme-i4-y0x"/>
                                 </constraints>
-                                <state key="normal" title="Up"/>
+                                <state key="normal" title="Up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonTappenWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="psD-JX-vsT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OH9-ZP-cjc">
                                 <rect key="frame" x="208" y="105" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="OIz-ah-Boj"/>
                                     <constraint firstAttribute="width" constant="46" id="VzD-QB-OGg"/>
                                 </constraints>
-                                <state key="normal" title="Left"/>
+                                <state key="normal" title="Left">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonTappenWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UTQ-Sd-il8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YpR-f3-Xss">
                                 <rect key="frame" x="293" y="105" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="PzF-IR-7NQ"/>
                                     <constraint firstAttribute="width" constant="46" id="fjo-P9-za1"/>
                                 </constraints>
-                                <state key="normal" title="Right"/>
+                                <state key="normal" title="Right">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonTappenWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="09A-8Q-vZH"/>
                                 </connections>
