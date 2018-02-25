@@ -2,7 +2,7 @@
 A custom view transition that provides transition between 2 different views with 3D cube rotate effect.
 
 # Screenshot
-[STCubeTransition](https://github.com/Sa74/STCubeTransition/blob/master/STCubeTransition/STCubeTransition/assets/STCubeTransition.gif)
+![STCubeTransition](https://github.com/Sa74/STCubeTransition/blob/master/STCubeTransition/STCubeTransition/assets/STCubeTransition.gif)
 
 # Author
 [Sasi Moorthy](https://twitter.com/Sasi3726). Looking out for freelance work, if interested feel free to contact me.
