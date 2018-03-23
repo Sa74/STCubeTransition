@@ -5,7 +5,6 @@ A custom view transition that provides transition between 2 different views with
 [![Version](https://img.shields.io/cocoapods/v/STCubeTransition.svg?style=flat)](http://cocoapods.org/pods/STCubeTransition)
 [![License](https://img.shields.io/cocoapods/l/STCubeTransition.svg?style=flat)](http://cocoapods.org/pods/STCubeTransition)
 [![Platform](https://img.shields.io/cocoapods/p/STCubeTransition.svg?style=flat)](http://cocoapods.org/pods/STCubeTransition)
-[![Language](https://img.shields.io/cocoapods/p/STCubeTransition.svg?style=flat)](http://cocoapods.org/pods/STCubeTransition)
 
 # Screenshot
 ![STCubeTransition](https://github.com/Sa74/STCubeTransition/blob/master/STCubeTransition/STCubeTransition/assets/STCubeTransition.gif)
