@@ -38,7 +38,7 @@ pod try STCubeTransition
 
 ## Author
 
-[Sasi Moorthy](https://twitter.com/Sasi3726), msasi7274@gmail.com. Looking out for freelance work, if interested feel free to contact me.
+[Sasi Moorthy](https://twitter.com/Sasi3726), [📧](msasi7274@gmail.com). Looking out for freelance work, if interested feel free to contact me.
 
 ## License
 
