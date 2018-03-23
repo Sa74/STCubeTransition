@@ -26,6 +26,7 @@ You want to add pod 'STCubeTransition', '~> 1.0' similar to the following to you
 ```
 target 'MyApp' do
   pod 'STCubeTransition', '~> 1.0'
+  use_frameworks!
 end
 ```
 Then run a pod install inside your terminal, or from CocoaPods.app.
