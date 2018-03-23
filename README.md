@@ -23,7 +23,8 @@ pod 'STCubeTransition'
 ```
 You want to add pod 'STCubeTransition', '~> 1.0' similar to the following to your Podfile:
 
-```target 'MyApp' do
+```
+target 'MyApp' do
   pod 'STCubeTransition', '~> 1.0'
 end
 ```
@@ -31,7 +32,8 @@ Then run a pod install inside your terminal, or from CocoaPods.app.
 
 Alternatively to give it a test run, run the command:
 
-```pod try STCubeTransition
+```
+pod try STCubeTransition
 ```
 
 ## Author
