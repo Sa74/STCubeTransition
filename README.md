@@ -21,6 +21,19 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'STCubeTransition'
 ```
+You want to add pod 'STCubeTransition', '~> 1.0' similar to the following to your Podfile:
+
+```target 'MyApp' do
+  pod 'STCubeTransition', '~> 1.0'
+end
+```
+Then run a pod install inside your terminal, or from CocoaPods.app.
+
+Alternatively to give it a test run, run the command:
+
+```pod try STCubeTransition
+```
+
 ## Author
 
 [Sasi Moorthy](https://twitter.com/Sasi3726), msasi7274@gmail.com. Looking out for freelance work, if interested feel free to contact me.
