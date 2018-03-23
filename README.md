@@ -9,10 +9,6 @@ A custom view transition that provides transition between 2 different views with
 # Screenshot
 ![STCubeTransition](https://github.com/Sa74/STCubeTransition/blob/master/STCubeTransition/STCubeTransition/assets/STCubeTransition.gif)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
 ## Installation
 
 STCubeTransition is available through [CocoaPods](http://cocoapods.org). To install
