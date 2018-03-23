@@ -4,7 +4,7 @@ A custom view transition that provides transition between 2 different views with
 [![CI Status](http://img.shields.io/travis/Sa74/STCubeTransition.svg?style=flat)](https://travis-ci.org/Sa74/STCubeTransition)
 [![Version](https://img.shields.io/cocoapods/v/STCubeTransition.svg?style=flat)](http://cocoapods.org/pods/STCubeTransition)
 [![License](https://img.shields.io/cocoapods/l/STCubeTransition.svg?style=flat)](http://cocoapods.org/pods/STCubeTransition)
-[![Platform](https://img.shields.io/cocoapods/p/STCubeTransition.svg?style=flat)](http://cocoapods.org/pods/STCubeTransition
+[![Platform](https://img.shields.io/cocoapods/p/STCubeTransition.svg?style=flat)](http://cocoapods.org/pods/STCubeTransition)
 [![Language](https://img.shields.io/cocoapods/p/STCubeTransition.svg?style=flat)](http://cocoapods.org/pods/STCubeTransition)
 
 # Screenshot
