@@ -1,32 +1,30 @@
 # STCubeTransition
 A custom view transition that provides transition between 2 different views with 3D cube rotate effect.
 
+[![CI Status](http://img.shields.io/travis/Sa74/STCubeTransition.svg?style=flat)](https://travis-ci.org/Sa74/STCubeTransition)
+[![Version](https://img.shields.io/cocoapods/v/STCubeTransition.svg?style=flat)](http://cocoapods.org/pods/STCubeTransition)
+[![License](https://img.shields.io/cocoapods/l/STCubeTransition.svg?style=flat)](http://cocoapods.org/pods/STCubeTransition)
+[![Platform](https://img.shields.io/cocoapods/p/STCubeTransition.svg?style=flat)](http://cocoapods.org/pods/STCubeTransition)
+
 # Screenshot
 ![STCubeTransition](https://github.com/Sa74/STCubeTransition/blob/master/STCubeTransition/STCubeTransition/assets/STCubeTransition.gif)
 
-# Author
-[Sasi Moorthy](https://twitter.com/Sasi3726). Looking out for freelance work, if interested feel free to contact me.
+## Example
 
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-# MIT License
+## Installation
 
-	Copyright (c) 2017 Sasi Moorthy. All rights reserved.
+STCubeTransition is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
 
-	Permission is hereby granted, free of charge, to any person obtaining a
-	copy of this software and associated documentation files (the "Software"),
-	to deal in the Software without restriction, including
-	without limitation the rights to use, copy, modify, merge, publish,
-	distribute, sublicense, and/or sell copies of the Software, and to
-	permit persons to whom the Software is furnished to do so, subject to
-	the following conditions:
+```ruby
+pod 'STCubeTransition'
+```
+## Author
 
-	The above copyright notice and this permission notice shall be included
-	in all copies or substantial portions of the Software.
+[Sasi Moorthy](https://twitter.com/Sasi3726), msasi7274@gmail.com. Looking out for freelance work, if interested feel free to contact me.
 
-	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-	OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-	MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-	IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-	CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-	TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-	SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+## License
+
+STCubeTransition is available under the MIT license. See the LICENSE file for more info.
