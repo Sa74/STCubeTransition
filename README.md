@@ -39,4 +39,4 @@ pod try STCubeTransition
 
 ## License
 
-STCubeTransition is available under the MIT license. See the LICENSE file for more info.
+[STCubeTransition](https://cocoapods.org/pods/STCubeTransition) is available under the MIT license. See the LICENSE file for more info.
