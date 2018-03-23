@@ -38,14 +38,14 @@ let kDefaultFocalLength = 1000.0
 /*
  Cube transition direction options enum
  */
-enum CubeTransitionDirection : Int {
+public enum CubeTransitionDirection : Int {
     case Down = 1, Up, Left, Right
 }
 
 /*
  Cube transition delegate to handle animation completion
  */
-protocol CubeTransitionDelegate: class {
+public protocol CubeTransitionDelegate: class {
     func animationDidFinishWithView(displayView: UIView)
 }
 
@@ -64,9 +64,9 @@ open class CubeTransition: UIViewController, CAAnimationDelegate {
     var fillContentViewToBounds:Bool = false
     
     
-    var delegate:CubeTransitionDelegate?
+    public var delegate:CubeTransitionDelegate?
     
-    func translateView(faceView:UIView, withView hiddenView:UIView, toDirection aDirection:CubeTransitionDirection, withDetlay delay:Float) {
+    public func translateView(faceView:UIView, withView hiddenView:UIView, toDirection aDirection:CubeTransitionDirection, withDetlay delay:Float) {
         
         self.contentView = hiddenView
         
