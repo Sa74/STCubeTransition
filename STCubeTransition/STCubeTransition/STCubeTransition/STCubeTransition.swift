@@ -45,8 +45,8 @@ public enum CubeTransitionDirection : Int {
 /*
  Cube transition delegate to handle animation completion
  */
-public protocol CubeTransitionDelegate: class {
-    func animationDidFinishWithView(displayView: UIView)
+@objc public protocol CubeTransitionDelegate: class {
+    @objc optional func animationDidFinishWithView(displayView: UIView)
 }
 
 open class CubeTransition: UIViewController, CAAnimationDelegate {
@@ -210,7 +210,8 @@ open class CubeTransition: UIViewController, CAAnimationDelegate {
     public func animationDidStop(_ animation:CAAnimation, finished:Bool) {
         contentView!.frame = rootView.frame
         self.rootView.superview?.addSubview(contentView!)
-        self.delegate?.animationDidFinishWithView(displayView: contentView!)
+        
+        self.delegate?.animationDidFinishWithView?(displayView: contentView!)
         self.animationLayer!.removeFromSuperlayer()
         self.rootView.layer.removeAllAnimations()
         self.contentView?.layer.removeAllAnimations()
