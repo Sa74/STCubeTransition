@@ -30,7 +30,7 @@
                                 <rect key="frame" x="26" y="105" width="46" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="VPa-vU-P8y"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="VPa-vU-P8y"/>
                                     <constraint firstAttribute="height" constant="30" id="aDe-zD-vfb"/>
                                 </constraints>
                                 <state key="normal" title="Down">
@@ -45,7 +45,7 @@
                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="LTJ-zV-F2H"/>
-                                    <constraint firstAttribute="width" constant="46" id="Qme-i4-y0x"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="Qme-i4-y0x"/>
                                 </constraints>
                                 <state key="normal" title="Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -59,7 +59,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="OIz-ah-Boj"/>
-                                    <constraint firstAttribute="width" constant="46" id="VzD-QB-OGg"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="VzD-QB-OGg"/>
                                 </constraints>
                                 <state key="normal" title="Left">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -73,7 +73,7 @@
                                 <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="PzF-IR-7NQ"/>
-                                    <constraint firstAttribute="width" constant="46" id="fjo-P9-za1"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="fjo-P9-za1"/>
                                 </constraints>
                                 <state key="normal" title="Right">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -92,8 +92,9 @@
                             <constraint firstItem="c2e-PY-R1b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="VD9-vY-mro"/>
                             <constraint firstItem="OH9-ZP-cjc" firstAttribute="centerY" secondItem="rjG-gi-FfQ" secondAttribute="centerY" id="bWp-Sa-tLz"/>
                             <constraint firstItem="rjG-gi-FfQ" firstAttribute="leading" secondItem="c2e-PY-R1b" secondAttribute="trailing" constant="47" id="dKX-cm-Lag"/>
-                            <constraint firstItem="YpR-f3-Xss" firstAttribute="leading" secondItem="OH9-ZP-cjc" secondAttribute="trailing" constant="39" id="kq1-qq-uZy"/>
+                            <constraint firstItem="YpR-f3-Xss" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OH9-ZP-cjc" secondAttribute="trailing" symbolic="YES" id="kq1-qq-uZy"/>
                             <constraint firstItem="9Wm-jV-Jj2" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="mWH-Ro-vm7"/>
+                            <constraint firstAttribute="trailing" secondItem="YpR-f3-Xss" secondAttribute="trailing" constant="36" id="r8F-Gu-Y4p"/>
                             <constraint firstItem="rjG-gi-FfQ" firstAttribute="centerY" secondItem="c2e-PY-R1b" secondAttribute="centerY" id="rV4-gx-iHe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
