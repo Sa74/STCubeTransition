@@ -7,10 +7,13 @@ A custom view transition that provides transition between 2 different views with
 [![Platform](https://img.shields.io/cocoapods/p/STCubeTransition.svg?style=flat)](http://cocoapods.org/pods/STCubeTransition)
 
 # Screenshot
+------------
 ![STCubeTransition](https://github.com/Sa74/STCubeTransition/blob/master/STCubeTransition/STCubeTransition/assets/STCubeTransition.gif)
 
 ## Installation
+------------
 
+### Cocoapods
 STCubeTransition is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
@@ -32,6 +35,46 @@ Alternatively to give it a test run, run the command:
 ```
 pod try STCubeTransition
 ```
+### Manual
+- Drag and drop `STCubeTransition.swift` class into your project in Xcode.
+- Make sure you select all the targets required.
+
+## Usage
+
+It is much simpler than performing an UIView animation. 
+
+If you use Cocoapods framework, First of all, import the framework:
+
+```
+import STCubeTransition
+```
+
+Then, init CubeTransition with delegate as follows,
+
+```
+let cubeTranstion:CubeTransition = CubeTransition()
+cubeTranstion.delegate = self
+```
+
+next, perform cube transition between your views as follows,
+
+```
+cubeTranstion.translateView(faceView: self.faceView!,   // currently visible view
+                            withView: subMenu!,         // hidden view that you want to display from this transition
+                            toDirection: direction,     // any available CubeTransitionDirection
+                            withDuration: 0.5)          // animation duration
+```
+
+Finally, implement the CubeTransitionDelegate optional method if you would like to perform any additional actions,
+
+```
+func animationDidFinishWithView(displayView: UIView) {
+        // Do any additional work if required
+    }
+```
+
+Here you go you are all setup for performing cool Cube Transition in you app 👍
+
 
 ## Author
 
