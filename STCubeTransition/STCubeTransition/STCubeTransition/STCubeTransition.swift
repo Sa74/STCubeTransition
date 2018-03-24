@@ -201,7 +201,6 @@ open class CubeTransition: UIViewController, CAAnimationDelegate {
     }
     
     
-    
     // MARK: CAAnimation delegate methods
     
     public func animationDidStart(_ anim: CAAnimation) {
@@ -209,6 +208,8 @@ open class CubeTransition: UIViewController, CAAnimationDelegate {
     }
     
     public func animationDidStop(_ animation:CAAnimation, finished:Bool) {
+        contentView!.frame = rootView.frame
+        self.rootView.superview?.addSubview(contentView!)
         self.delegate?.animationDidFinishWithView(displayView: contentView!)
         self.animationLayer!.removeFromSuperlayer()
         self.rootView.layer.removeAllAnimations()
