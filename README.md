@@ -43,7 +43,7 @@ pod try STCubeTransition
 
 It is much simpler than performing an UIView animation. 
 
-If you use `Cocoapods` framework, First of all, import the framework:
+If you use `Cocoapods`, First of all, import the framework:
 
 ```
 import STCubeTransition
