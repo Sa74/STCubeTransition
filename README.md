@@ -43,13 +43,13 @@ pod try STCubeTransition
 
 It is much simpler than performing an UIView animation. 
 
-If you use Cocoapods framework, First of all, import the framework:
+If you use `Cocoapods` framework, First of all, import the framework:
 
 ```
 import STCubeTransition
 ```
 
-Then, init CubeTransition with delegate as follows,
+Then, init `CubeTransition` with delegate as follows,
 
 ```
 let cubeTranstion:CubeTransition = CubeTransition()
@@ -65,7 +65,7 @@ cubeTranstion.translateView(faceView: self.faceView!,   // currently visible vie
                             withDuration: 0.5)          // animation duration
 ```
 
-Finally, implement the CubeTransitionDelegate optional method if you would like to perform any additional actions,
+Finally, implement the `CubeTransitionDelegate` optional method if you would like to perform any additional actions,
 
 ```
 func animationDidFinishWithView(displayView: UIView) {
