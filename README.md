@@ -78,10 +78,10 @@ Here you go you are all setup for performing cool Cube Transition in you app ðŸ‘
 
 [Sasi Moorthy](https://twitter.com/Sasi3726), ðŸ“§ msasi7274@gmail.com. Looking out for freelance work, if interested feel free to contact me.
 
-Contributing
-------------
+### Contributing
 I :heart: pull requests. If you'd like to see new features, fix bugs, or lodge
 issues then please do so via Github.
+
 
 ## License
 
