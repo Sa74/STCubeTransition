@@ -66,7 +66,7 @@ open class CubeTransition: UIViewController, CAAnimationDelegate {
     
     public var delegate:CubeTransitionDelegate?
     
-    public func translateView(faceView:UIView, withView hiddenView:UIView, toDirection aDirection:CubeTransitionDirection, withDetlay delay:Float) {
+    public func translateView(faceView:UIView, withView hiddenView:UIView, toDirection aDirection:CubeTransitionDirection, withDuration duration:Float) {
         
         self.contentView = hiddenView
         
@@ -115,7 +115,7 @@ open class CubeTransition: UIViewController, CAAnimationDelegate {
         
         v.frame = hiddenView.frame
         self.rootView!.backgroundColor = UIColor.clear
-        self.rotateInDirection(aDirection: aDirection, duration: delay)
+        self.rotateInDirection(aDirection: aDirection, duration: duration)
     }
     
     func layerFromView(aView:UIView, withTransform transform:CATransform3D) -> CALayer {

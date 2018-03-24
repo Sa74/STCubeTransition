@@ -67,7 +67,7 @@ class ViewController: UIViewController, CubeTransitionDelegate {
         cubeTranstion.translateView(faceView: self.faceView!,
                                     withView: subMenu!,
                                     toDirection: direction,
-                                    withDetlay: 0.5)
+                                    withDuration: 0.5)
     }
 
 
