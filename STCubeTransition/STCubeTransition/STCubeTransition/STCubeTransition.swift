@@ -50,21 +50,21 @@ public enum CubeTransitionDirection : Int {
 }
 
 open class CubeTransition: UIViewController, CAAnimationDelegate {
-
-    var isAnimating:Bool = false
     
-    var animationLayer:CALayer?
-    var fadeOutLayer:CALayer?
-    var fadeInLayer:CALayer?
+    private var isAnimating:Bool = false
     
-    var contentView:UIView?
-    var rootView:UIView!
+    private var animationLayer:CALayer?
+    private var fadeOutLayer:CALayer?
+    private var fadeInLayer:CALayer?
     
-    var focalLength:Double = 0.0
-    var fillContentViewToBounds:Bool = false
+    private var contentView:UIView?
+    private var rootView:UIView!
     
+    private var focalLength:Double = 0.0
+    private var fillContentViewToBounds:Bool = false
+    private var rootViewColor:UIColor!
     
-    public var delegate:CubeTransitionDelegate?
+    public weak var delegate:CubeTransitionDelegate?
     
     public func translateView(faceView:UIView, withView hiddenView:UIView, toDirection aDirection:CubeTransitionDirection, withDuration duration:Float) {
         
@@ -84,14 +84,14 @@ open class CubeTransition: UIViewController, CAAnimationDelegate {
         sublayerTransform.m34 = CGFloat(1.0 / (-self.focalLength))
         animationLayer?.sublayerTransform = sublayerTransform
         rootView?.layer.addSublayer(animationLayer!)
-    
+        
         var t:CATransform3D = CATransform3DMakeTranslation(0.0, 0.0, 0.0)
         self.fadeOutLayer =  self.layerFromView(aView: faceView, withTransform: t)
         animationLayer?.addSublayer(self.fadeOutLayer!)
-    
+        
         let v:UIView = UIView.init(frame: rootView!.bounds)
         v.backgroundColor = UIColor.darkGray;
-    
+        
         switch aDirection {
         case .Down:
             t = CATransform3DTranslate(t, 0, -self.rootView.bounds.size.height, 0);
@@ -109,17 +109,18 @@ open class CubeTransition: UIViewController, CAAnimationDelegate {
             t = CATransform3DTranslate(t, -self.rootView.bounds.size.width, 0, 0);
             t = CATransform3DRotate(t, CGFloat(-(Double.pi/2)), 0, 1, 0);
         }
-    
+        
         self.fadeInLayer = self.layerFromView(aView: hiddenView, withTransform: t)
         animationLayer?.addSublayer(self.fadeInLayer!)
         
         v.frame = hiddenView.frame
+        rootViewColor = self.rootView!.backgroundColor
         self.rootView!.backgroundColor = UIColor.clear
         self.rotateInDirection(aDirection: aDirection, duration: duration)
     }
     
     func layerFromView(aView:UIView, withTransform transform:CATransform3D) -> CALayer {
-    
+        
         let rect:CGRect = CGRect.init(x: 0.0,
                                       y: self.rootView.frame.size.height - aView.bounds.size.height,
                                       width: aView.bounds.size.width,
@@ -129,13 +130,13 @@ open class CubeTransition: UIViewController, CAAnimationDelegate {
         imageLayer.anchorPoint = CGPoint.init(x: 1.0, y: 1.0)
         imageLayer.frame = rect
         imageLayer.transform = transform
-    
+        
         //Capture View
-        UIGraphicsBeginImageContext(aView.frame.size)
+        UIGraphicsBeginImageContextWithOptions(aView.frame.size, false, 0)
         aView.layer.render(in: UIGraphicsGetCurrentContext()!)
         let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
-    
+        
         imageLayer.contents = newImage.cgImage
         return imageLayer
     }
@@ -146,7 +147,7 @@ open class CubeTransition: UIViewController, CAAnimationDelegate {
         var rotation:CABasicAnimation?
         var translation:CABasicAnimation?
         var translationZ:CABasicAnimation?
-    
+        
         let group:CAAnimationGroup = CAAnimationGroup.init()
         group.delegate = self
         group.duration = CFTimeInterval(aDuration)
@@ -194,7 +195,7 @@ open class CubeTransition: UIViewController, CAAnimationDelegate {
         group.animations = [rotation!, translation!, translationZ!]
         group.fillMode = kCAFillModeForwards
         group.isRemovedOnCompletion = false
-    
+        
         CATransaction.begin()
         animationLayer?.add(group, forKey: kFlipAnimationKey)
         CATransaction.commit()
@@ -202,20 +203,18 @@ open class CubeTransition: UIViewController, CAAnimationDelegate {
     
     
     // MARK: CAAnimation delegate methods
-    
-    public func animationDidStart(_ anim: CAAnimation) {
-        self.isAnimating = true
-    }
-    
     public func animationDidStop(_ animation:CAAnimation, finished:Bool) {
+        rootView!.backgroundColor = rootViewColor
         contentView!.frame = rootView.frame
-        self.rootView.superview?.addSubview(contentView!)
+        if (rootView.superview?.subviews.contains(contentView!) == false) {
+            rootView.superview?.addSubview(contentView!)
+        }
         
-        self.delegate?.animationDidFinishWithView?(displayView: contentView!)
-        self.animationLayer!.removeFromSuperlayer()
-        self.rootView.layer.removeAllAnimations()
-        self.contentView?.layer.removeAllAnimations()
-        self.isAnimating = false
+        delegate?.animationDidFinishWithView?(displayView: contentView!)
+        animationLayer!.removeFromSuperlayer()
+        rootView.layer.removeAllAnimations()
+        contentView?.layer.removeAllAnimations()
+        isAnimating = false
     }
 }
 
