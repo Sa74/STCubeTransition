@@ -25,7 +25,7 @@
 		5E8FEBA3203F51A3007D9DA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E8FEBA6203F51A3007D9DA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E8FEBA8203F51A3007D9DA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5E8FEBAE203F51E7007D9DA2 /* STCubeTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = STCubeTransition.swift; path = STCubeTransition/STCubeTransition.swift; sourceTree = "<group>"; };
+		5E8FEBAE203F51E7007D9DA2 /* STCubeTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STCubeTransition.swift; sourceTree = "<group>"; };
 		5EE1E80020429C6B00FE6F89 /* STCubeTransition.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = STCubeTransition.mov; sourceTree = "<group>"; };
 		5EE1E80420429F4A00FE6F89 /* STCubeTransition.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = STCubeTransition.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E08B799215BE9F100CB6878 /* STCubeTransition */ = {
+			isa = PBXGroup;
+			children = (
+				5E8FEBAE203F51E7007D9DA2 /* STCubeTransition.swift */,
+			);
+			path = STCubeTransition;
+			sourceTree = "<group>";
+		};
 		5E8FEB90203F51A3007D9DA2 = {
 			isa = PBXGroup;
 			children = (
@@ -60,7 +68,7 @@
 		5E8FEB9B203F51A3007D9DA2 /* STCubeTransition */ = {
 			isa = PBXGroup;
 			children = (
-				5E8FEBAE203F51E7007D9DA2 /* STCubeTransition.swift */,
+				5E08B799215BE9F100CB6878 /* STCubeTransition */,
 				5EE1E7FF20429C3B00FE6F89 /* assets */,
 				5EE1E7FE20429C2900FE6F89 /* Demo */,
 				5E8FEBA0203F51A3007D9DA2 /* Main.storyboard */,
@@ -121,6 +129,7 @@
 				TargetAttributes = {
 					5E8FEB98203F51A3007D9DA2 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -312,7 +321,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sasimoorthy.STCubeTransition;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -327,7 +336,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sasimoorthy.STCubeTransition;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
