@@ -38,7 +38,7 @@ Pod::Spec.new do |s|
   #
 
   s.license      = { :type => "MIT", :file => "LICENSE" }
-  s.swift_version = '4.0'
+  s.swift_version = '4.2'
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
