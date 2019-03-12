@@ -42,13 +42,6 @@ public enum CubeTransitionDirection : Int {
     case Down = 1, Up, Left, Right
 }
 
-/*
- Cube transition delegate to handle animation completion
- */
-@objc public protocol CubeTransitionDelegate: class {
-    @objc optional func animationDidFinishWithView(displayView: UIView)
-}
-
 open class CubeTransition: UIViewController, CAAnimationDelegate {
     
     private var isAnimating:Bool = false
@@ -65,10 +58,20 @@ open class CubeTransition: UIViewController, CAAnimationDelegate {
     private var fillContentViewToBounds:Bool = false
     private var rootViewColor:UIColor!
     
-    public weak var delegate:CubeTransitionDelegate?
+    /*
+     * Completion closure that will get called every time
+     * when the view transition is finished with contentView parameter
+     */
+    private var completionHandler: (_ displayView: UIView) -> Void = {_ in }
     
-    public func translateView(faceView:UIView, withView hiddenView:UIView, toDirection aDirection:CubeTransitionDirection, withDuration duration:Float) {
-        
+    
+    public func translateView(faceView:UIView,
+                              withView hiddenView:UIView,
+                              toDirection aDirection:CubeTransitionDirection,
+                              withDuration duration:Float,
+                              completion: @escaping (_ displayView: UIView) -> ())
+    {
+        completionHandler = completion
         contentView = hiddenView
         focalLength = kDefaultFocalLength
         if (isAnimating) {
@@ -219,7 +222,8 @@ open class CubeTransition: UIViewController, CAAnimationDelegate {
             rootView.superview?.bringSubviewToFront(contentView!)
         }
         
-        delegate?.animationDidFinishWithView?(displayView: contentView!)
+        
+        completionHandler(contentView!)
         animationLayer!.removeFromSuperlayer()
         rootView.layer.removeAllAnimations()
         contentView?.layer.removeAllAnimations()

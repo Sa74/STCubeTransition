@@ -25,25 +25,13 @@
 
 import UIKit
 
-class ViewController: UIViewController, CubeTransitionDelegate {
+class ViewController: UIViewController {
     
     @IBOutlet var faceView:UIView?
     var subMenu:UIView?
     
     let cubeTranstion:CubeTransition = CubeTransition()
     
-    func animationDidFinishWithView(displayView: UIView) {
-        self.faceView?.backgroundColor = self.subMenu?.backgroundColor
-        self.subMenu?.removeFromSuperview()
-        self.subMenu = nil
-    }
-    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        cubeTranstion.delegate = self
-    }
-
     @IBAction func buttonTappen(sender: UIButton) {
         
         self.subMenu = UIView.init(frame: self.faceView!.bounds);
@@ -67,7 +55,11 @@ class ViewController: UIViewController, CubeTransitionDelegate {
         cubeTranstion.translateView(faceView: self.faceView!,
                                     withView: subMenu!,
                                     toDirection: direction,
-                                    withDuration: 0.5)
+                                    withDuration: 0.5) { [weak self] (displayView) in
+                                        self!.faceView?.backgroundColor = self!.subMenu?.backgroundColor
+                                        self!.subMenu?.removeFromSuperview()
+                                        self!.subMenu = nil
+        }
     }
 
 
