@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "STCubeTransition"
-  s.version      = "1.3"
+  s.version      = "1.4"
   s.summary      = "UIVIew 3D Cube rotate effect"
 
   # This description is used to generate tags and improve search results.
