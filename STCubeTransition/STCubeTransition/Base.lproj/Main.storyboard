@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Wm-jV-Jj2">
-                                <rect key="frame" x="67" y="249.5" width="240" height="188"/>
+                                <rect key="frame" x="67.5" y="249.5" width="240" height="188"/>
                                 <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="188" id="pow-Ws-2gp"/>
@@ -82,9 +82,18 @@
                                     <action selector="buttonTappenWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="09A-8Q-vZH"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZ0-0A-yKc">
+                                <rect key="frame" x="67.5" y="459" width="240" height="188"/>
+                                <color key="backgroundColor" red="0.1411641538143158" green="0.051360160112380981" blue="0.89280253648757935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="188" id="glI-Bt-VFQ"/>
+                                    <constraint firstAttribute="width" constant="240" id="l0a-l2-ZLE"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="fZ0-0A-yKc" firstAttribute="centerX" secondItem="9Wm-jV-Jj2" secondAttribute="centerX" id="0GG-w6-5Lb"/>
                             <constraint firstItem="9Wm-jV-Jj2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Esl-sv-osU"/>
                             <constraint firstItem="OH9-ZP-cjc" firstAttribute="leading" secondItem="rjG-gi-FfQ" secondAttribute="trailing" constant="43" id="Jnp-lp-HwG"/>
                             <constraint firstItem="YpR-f3-Xss" firstAttribute="centerY" secondItem="OH9-ZP-cjc" secondAttribute="centerY" id="Nj1-go-1cQ"/>
@@ -96,11 +105,13 @@
                             <constraint firstItem="9Wm-jV-Jj2" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="mWH-Ro-vm7"/>
                             <constraint firstAttribute="trailing" secondItem="YpR-f3-Xss" secondAttribute="trailing" constant="36" id="r8F-Gu-Y4p"/>
                             <constraint firstItem="rjG-gi-FfQ" firstAttribute="centerY" secondItem="c2e-PY-R1b" secondAttribute="centerY" id="rV4-gx-iHe"/>
+                            <constraint firstItem="fZ0-0A-yKc" firstAttribute="top" secondItem="9Wm-jV-Jj2" secondAttribute="bottom" constant="21.5" id="uON-cu-YKT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="faceView" destination="9Wm-jV-Jj2" id="ywn-dQ-CGF"/>
+                        <outlet property="faceView1" destination="fZ0-0A-yKc" id="4NN-Qk-Zh1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

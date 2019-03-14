@@ -28,40 +28,49 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet var faceView:UIView?
+    @IBOutlet var faceView1:UIView?
     var subMenu:UIView?
+    var subMenu1:UIView?
     
     let cubeTranstion:CubeTransition = CubeTransition()
     
     @IBAction func buttonTappen(sender: UIButton) {
         
-        self.subMenu = UIView.init(frame: self.faceView!.bounds);
+        if (subMenu == nil) {
+            subMenu = UIView.init(frame: faceView!.bounds);
+            subMenu1 = UIView.init(frame: faceView1!.bounds);
+        } else {
+            subMenu!.removeFromSuperview()
+            subMenu1!.removeFromSuperview()
+        }
         
         let direction:CubeTransitionDirection = CubeTransitionDirection(rawValue: sender.tag)!
         
         switch direction {
         case .Down:
             subMenu!.backgroundColor = UIColor.red
+            subMenu1!.backgroundColor = UIColor.gray
         
         case .Up:
             subMenu!.backgroundColor = UIColor.blue
+            subMenu1!.backgroundColor = UIColor.brown
             
         case .Left:
             subMenu!.backgroundColor = UIColor.green
+            subMenu1!.backgroundColor = UIColor.orange
             
         case .Right:
             subMenu!.backgroundColor = UIColor.purple
+            subMenu1!.backgroundColor = UIColor.yellow
         }
         
-        cubeTranstion.translateView(faceView: self.faceView!,
-                                    withView: subMenu!,
-                                    toDirection: direction,
-                                    withDuration: 0.5) { [weak self] (displayView) in
-                                        self!.faceView?.backgroundColor = self!.subMenu?.backgroundColor
-                                        self!.subMenu?.removeFromSuperview()
-                                        self!.subMenu = nil
+        cubeTranstion.translateView(faceView!, toView: subMenu!, direction: direction, duration: 0.5) { [weak self] (displayView) in
+            self!.faceView?.backgroundColor = displayView.backgroundColor
+        }
+        
+        cubeTranstion.translateView(faceView1!, toView: subMenu1!, direction: direction, duration: 0.5) { [weak self] (displayView) in
+            self!.faceView1?.backgroundColor = displayView.backgroundColor
         }
     }
-
-
 }
 
