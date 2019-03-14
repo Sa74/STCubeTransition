@@ -36,13 +36,9 @@ private let kFlipAnimationKey = "FlipAnimation"
 private let kDefaultFocalLength = 1000.0
 
 /*
- TranstionQueue creation keys
+ Animation layer key to capture fromView
  */
 private let fromViewKey = "FromView"
-private let toViewKey = "ToView"
-private let overlayViewKey = "OverlayView"
-private let animationLayerKey = "AnimationLayer"
-private let backgroundColorKey = "BackgroundColor"
 
 /*
  Cube transition direction options enum
