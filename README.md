@@ -18,11 +18,11 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'STCubeTransition'
 ```
-You want to add pod 'STCubeTransition', '~> 1.0' similar to the following to your Podfile:
+You want to add pod 'STCubeTransition', '~> 1.4' similar to the following to your Podfile:
 
 ```
 target 'MyApp' do
-  pod 'STCubeTransition', '~> 1.0'
+  pod 'STCubeTransition', '~> 1.4'
   use_frameworks!
 end
 ```
@@ -47,29 +47,26 @@ If you use `Cocoapods`, First of all, import the framework:
 import STCubeTransition
 ```
 
-Then, init `CubeTransition` with delegate as follows,
+Then, init `CubeTransition` as follows,
 
 ```
 let cubeTranstion:CubeTransition = CubeTransition()
-cubeTranstion.delegate = self
 ```
 
 next, perform cube transition between your views as follows,
 
 ```
-cubeTranstion.translateView(faceView: self.faceView!,   // currently visible view
-                            withView: subMenu!,         // hidden view that you want to display from this transition
-                            toDirection: direction,     // any available CubeTransitionDirection
-                            withDuration: 0.5)          // animation duration
+cubeTranstion.translateView(faceView!,                                // currently visible view
+                            toView: subMenu!,                         // hidden view that you want to display from this transition
+                            direction: direction,                     // any available CubeTransitionDirection
+                            duration: 0.5)                            // animation duration 
+                            { (displayView) in
+                                // animation completion callback 
+                            }
 ```
 
-Finally, implement the `CubeTransitionDelegate` optional method if you would like to perform any additional actions,
+Finally, use the `Completion` block if you would like to perform any additional actions,
 
-```
-func animationDidFinishWithView(displayView: UIView) {
-        // Do any additional work if required
-    }
-```
 
 Here you go you are all setup for performing cool Cube Transition in you app 👍
 
