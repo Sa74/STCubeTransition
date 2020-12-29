@@ -217,10 +217,13 @@ open class CubeTransition: UIViewController, CAAnimationDelegate {
         contentView.frame = fromView.frame
         
         fromView.backgroundColor = transtion.backgroundColor
-        if (fromView.superview!.subviews.contains(contentView) == false) {
-            fromView.superview!.addSubview(contentView)
-        } else {
-            fromView.superview!.bringSubviewToFront(contentView)
+        
+        if let superview = fromView.superview {
+            if superview.subviews.contains(contentView) == false {
+                superview.addSubview(contentView)
+            } else {
+                superview.bringSubviewToFront(contentView)
+            }
         }
         
         let animationLayer = transtion.animationLayer
